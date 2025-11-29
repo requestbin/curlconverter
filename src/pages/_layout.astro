@@ -1,0 +1,146 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Free cURL to Code Converter - Python, JS, Go & 15+ Languages | CurlConverter.net',
+  description = 'Convert cURL commands to Python, JavaScript, Go, PHP, Java, C#, Rust and more. Fast, secure, browser-based converter with syntax highlighting. No signup required.',
+  ogTitle = title
+} = Astro.props;
+---
+<html lang="en" id="top">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CurlConverter.net" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBQVNMQQ');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Additional SEO meta tags -->
+    <meta name="keywords" content="curl converter, curl to python, curl to javascript, curl to code, api testing, http request converter, devtools curl, curl to go, curl to php" />
+    <meta name="author" content="RequestBin" />
+    <link rel="canonical" href="https://curlconverter.net" />
+  </head>
+  <body class="min-h-screen">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBQVNMQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <header class="border-b border-gray-200/50 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <div class="mx-auto max-w-7xl px-4 md:px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="6" fill="#111827"/>
+              <path d="M3 8c1.5-2 3.5-3 6-3v2c-1.5 0-2.5.5-3 1.5L6 8c0 .5 0 1 0 1.5L6 11c.5 1 1.5 1.5 3 1.5v2c-2.5 0-4.5-1-6-3z" stroke="#ffffff" />
+              <path d="M21 16c-1.5 2-3.5 3-6 3v-2c1.5 0 2.5-.5 3-1.5L18 16c0-.5 0-1 0-1.5L18 13c-.5-1-1.5-1.5-3-1.5v-2c2.5 0 4.5 1 6 3z" stroke="#ffffff" />
+            </svg>
+
+          </div>
+          <div>
+            <a href="/" class="text-lg font-bold text-gray-900 hover:text-blue-600 transition-colors">CurlConverter.net</a>
+            <div class="text-xs text-gray-500 hidden sm:block">by <a href="https://requestbin.net" class="text-blue-600 hover:underline">RequestBin</a></div>
+          </div>
+        </div>
+        <nav class="flex items-center gap-4">
+          <a href="/python" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors hidden md:inline">Python</a>
+          <a href="/javascript" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors hidden md:inline">JavaScript</a>
+          <a href="https://requestbin.net" target="_blank" rel="noopener" class="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+            RequestBin →
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 md:px-6 py-8 md:py-12">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200/50 mt-16 bg-white/80 backdrop-blur-sm">
+      <div class="mx-auto max-w-7xl px-4 md:px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand Column -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="6" fill="#111827"/>
+                  <path d="M3 8c1.5-2 3.5-3 6-3v2c-1.5 0-2.5.5-3 1.5L6 8c0 .5 0 1 0 1.5L6 11c.5 1 1.5 1.5 3 1.5v2c-2.5 0-4.5-1-6-3z" stroke="#ffffff" />
+                  <path d="M21 16c-1.5 2-3.5 3-6 3v-2c1.5 0 2.5-.5 3-1.5L18 16c0-.5 0-1 0-1.5L18 13c-.5-1-1.5-1.5-3-1.5v-2c2.5 0 4.5 1 6 3z" stroke="#ffffff" />
+                </svg>
+              </div>
+              <span class="text-lg font-bold text-gray-900">CurlConverter.net</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-4 max-w-sm">
+              Free, fast, and privacy-first cURL to code converter. Transform HTTP requests into production-ready code in 15+ programming languages.
+            </p>
+            <div class="flex gap-3">
+              <a href="https://github.com/requestbin" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-700 transition-colors" title="GitHub">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Languages Column -->
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">Popular Languages</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/python" class="text-gray-600 hover:text-blue-600 transition-colors">cURL to Python</a></li>
+              <li><a href="/javascript" class="text-gray-600 hover:text-blue-600 transition-colors">cURL to JavaScript</a></li>
+              <li><a href="/?lang=go" class="text-gray-600 hover:text-blue-600 transition-colors">cURL to Go</a></li>
+              <li><a href="/?lang=php" class="text-gray-600 hover:text-blue-600 transition-colors">cURL to PHP</a></li>
+              <li><a href="/?lang=java" class="text-gray-600 hover:text-blue-600 transition-colors">cURL to Java</a></li>
+            </ul>
+          </div>
+
+          <!-- Tools Column -->
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">Related Tools</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="https://requestbin.net" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">RequestBin Inspector</a></li>
+              <li><a href="https://requestbin.net/apps/http-requester" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">HTTP Requester</a></li>
+              <li><a href="https://requestbin.net/apps/curl-converter" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">Advanced Converter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <div>
+            © {new Date().getFullYear()} CurlConverter.net by <a href="https://requestbin.net" class="text-blue-600 hover:underline font-medium">RequestBin</a>. All rights reserved.
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              100% Private
+            </span>
+            <span>•</span>
+            <span>No Tracking</span>
+            <span>•</span>
+            <span>Open Source</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

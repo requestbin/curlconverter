@@ -1,0 +1,238 @@
+---
+import Layout from './_layout.astro';
+import ConverterIsland from '../components/ConverterIsland';
+import { TARGETS } from '../lib/languages';
+---
+<Layout
+  title="Free cURL to Code Converter - Python, JavaScript, Go, PHP & More | CurlConverter.net"
+  description="Convert cURL commands to Python, JavaScript, Go, PHP, Java, C#, Rust, and more. Fast, secure, browser-based converter with syntax highlighting. No signup required."
+  ogTitle="Free cURL to Code Converter - 15+ Languages"
+>
+  <!-- Hero Section -->
+  <section class="text-center mb-12 md:mb-16">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      100% Free • No Signup • Privacy-First
+    </div>
+    
+    <h1 class="heading mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+      Convert cURL to Code
+    </h1>
+    <p class="subtle max-w-2xl mx-auto mb-8">
+      Transform cURL commands into production-ready code in <strong>15+ programming languages</strong>. 
+      Fast, secure, and runs entirely in your browser. Perfect for API testing and documentation.
+    </p>
+
+    <!-- Language Pills as Links -->
+    <div class="flex flex-wrap justify-center gap-2 mb-8">
+      {TARGETS.map(lang => (
+        <a
+          href={`/${lang.value}`}
+          class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-lg text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md transition-all"
+        >
+          <span class="text-base">{lang.icon}</span>
+          {lang.label}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Converter Tool -->
+  <ConverterIsland client:load />
+
+  <!-- Features Grid -->
+  <section class="mt-16 md:mt-24 mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
+      Why Developers Choose CurlConverter.net
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-green-600">100% Private</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          All conversion happens in your browser using Web Workers. Your cURL commands never leave your device.
+        </p>
+      </div>
+
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-blue-600">Lightning Fast</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Instant conversion with zero server latency. Convert hundreds of cURL commands in seconds.
+        </p>
+      </div>
+
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-purple-600">Production Ready</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Generates clean, idiomatic code that follows language best practices. Copy, paste, and run.
+        </p>
+      </div>
+
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-orange-600">15+ Languages</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Python, JavaScript, Go, PHP, Java, C#, Rust, Swift, Dart, Perl, PowerShell, and more.
+        </p>
+      </div>
+
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-teal-600">Copy & Download</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          One-click copy to clipboard or download as file. Perfect for documentation and sharing.
+        </p>
+      </div>
+
+      <div class="card text-center group hover:border-blue-200 transition-colors">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+        <h3 class="label mb-2 text-violet-600">Open Source</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Free forever. No signup, no tracking, no limits. Integrated with RequestBin for advanced testing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="mt-16 mb-16 bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-200 shadow-xl">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900">
+      Perfect For Every Developer Workflow
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">1</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">API Documentation</h4>
+            <p class="text-sm text-gray-600">Convert cURL examples from API docs into your preferred programming language instantly.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">2</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Browser DevTools</h4>
+            <p class="text-sm text-gray-600">Copy requests from Chrome/Firefox DevTools as cURL and convert to production code.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">3</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Testing & QA</h4>
+            <p class="text-sm text-gray-600">Quickly generate test scripts in your testing framework's language from cURL commands.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">4</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Learning & Education</h4>
+            <p class="text-sm text-gray-600">See how the same HTTP request looks in different languages side-by-side.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">5</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Webhook Integration</h4>
+            <p class="text-sm text-gray-600">Turn webhook examples into handler code for your backend framework.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold">6</div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-1">Migration Projects</h4>
+            <p class="text-sm text-gray-600">Convert legacy scripts from one language to another during platform migrations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="mt-16 mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900">
+      How to Get cURL from Chrome DevTools
+    </h2>
+    <div class="max-w-3xl mx-auto">
+      <div class="card">
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">1</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 mb-2">Open DevTools</h4>
+              <p class="text-sm text-gray-600">Press <kbd class="px-2 py-1 bg-gray-100 rounded border border-gray-300 font-mono text-xs">F12</kbd> or right-click → Inspect, then go to the <strong>Network</strong> tab.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">2</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 mb-2">Find Your Request</h4>
+              <p class="text-sm text-gray-600">Perform the action in your browser, then find the HTTP request in the Network tab.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">3</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 mb-2">Copy as cURL</h4>
+              <p class="text-sm text-gray-600">Right-click the request → <strong>Copy</strong> → <strong>Copy as cURL</strong>. Works in Chrome, Firefox, Safari, and Edge.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg">4</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 mb-2">Paste & Convert</h4>
+              <p class="text-sm text-gray-600">Paste into CurlConverter.net and select your target language. Done! 🎉</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="mt-16 mb-12 text-center">
+    <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+        Ready to Convert Your cURL Commands?
+      </h2>
+      <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Join thousands of developers who use CurlConverter.net daily for fast, secure cURL-to-code conversion.
+      </p>
+      <a href="#top" class="btn btn-primary inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+        Start Converting Now
+      </a>
+    </div>
+  </section>
+</Layout>
