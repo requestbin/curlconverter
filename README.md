@@ -214,7 +214,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 🔗 Related Projects
 
 - **[RequestBin](https://requestbin.net)** - Inspect HTTP requests with custom endpoints
-- **[RequestBin.saas](https://github.com/requestbin/requestbin.saas)** - Full-featured SaaS platform with Clerk auth
 
 ---
 
