@@ -1,0 +1,180 @@
+/* Markdown Content Styling - Global CSS */
+.markdown-content {
+  color: #1f2937;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* Headings with !important to override Tailwind resets */
+.markdown-content h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: #111827 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.markdown-content h2 {
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: #111827 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+
+.markdown-content h3 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: #1f2937 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.markdown-content h4 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Paragraphs */
+.markdown-content p {
+  margin-bottom: 1.25rem !important;
+  line-height: 1.75 !important;
+  font-size: 1rem !important;
+}
+
+/* Lists with forced display */
+.markdown-content ul {
+  margin-bottom: 1.25rem !important;
+  padding-left: 1.5rem !important;
+  list-style-type: disc !important;
+}
+
+.markdown-content ol {
+  margin-bottom: 1.25rem !important;
+  padding-left: 1.5rem !important;
+  list-style-type: decimal !important;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.75 !important;
+  display: list-item !important;
+}
+
+.markdown-content li > ul,
+.markdown-content li > ol {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Links */
+.markdown-content a:not(.no-underline) {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  text-decoration-color: #93c5fd !important;
+  text-underline-offset: 2px !important;
+}
+
+.markdown-content a:not(.no-underline):hover {
+  color: #1d4ed8 !important;
+  text-decoration-color: #3b82f6 !important;
+}
+
+/* Code */
+.markdown-content code {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  padding: 0.125rem 0.5rem !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.875rem !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+.markdown-content pre {
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  overflow-x: auto !important;
+  margin-bottom: 1.25rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.75 !important;
+}
+
+.markdown-content pre code {
+  background-color: transparent !important;
+  color: #f9fafb !important;
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+}
+
+/* Tables */
+.markdown-content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 0.875rem !important;
+}
+
+.markdown-content thead {
+  background-color: #f9fafb !important;
+}
+
+.markdown-content th {
+  border: 1px solid #d1d5db !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+}
+
+.markdown-content td {
+  border: 1px solid #d1d5db !important;
+  padding: 0.5rem 1rem !important;
+  color: #374151 !important;
+}
+
+.markdown-content tbody tr:hover {
+  background-color: #f9fafb !important;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  border-left: 4px solid #3b82f6 !important;
+  padding-left: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  font-style: italic !important;
+  color: #374151 !important;
+  background-color: #eff6ff !important;
+}
+
+/* Strong/Bold */
+.markdown-content strong {
+  font-weight: 600 !important;
+  color: #111827 !important;
+}
+
+/* Horizontal Rule */
+.markdown-content hr {
+  border-top: 1px solid #d1d5db !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Remove margin from first paragraph after headings */
+.markdown-content h1 + p,
+.markdown-content h2 + p,
+.markdown-content h3 + p {
+  margin-top: 0 !important;
+}

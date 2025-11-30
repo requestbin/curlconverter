@@ -1,0 +1,110 @@
+---
+import Layout from '../_layout.astro';
+
+const docs = [
+  {
+    title: 'Convert cURL to Python',
+    slug: 'convert-curl-to-python',
+    description: 'Learn how to convert cURL commands to Python using Requests library or HTTP client.',
+    category: 'Languages',
+  },
+  {
+    title: 'Convert cURL to JavaScript',
+    slug: 'convert-curl-to-javascript',
+    description: 'Transform cURL commands into JavaScript Fetch API or XMLHttpRequest code.',
+    category: 'Languages',
+  },
+  {
+    title: 'Convert cURL to Node.js',
+    slug: 'convert-curl-to-nodejs',
+    description: 'Generate Node.js code from cURL using HTTP, Axios, or Got libraries.',
+    category: 'Languages',
+  },
+  {
+    title: 'How It Works',
+    slug: 'how-it-works',
+    description: 'Understanding the cURL parsing and code generation process.',
+    category: 'Getting Started',
+  },
+  {
+    title: 'Headers and JSON Body',
+    slug: 'headers-and-json-body',
+    description: 'Working with custom headers, authentication, and JSON request bodies.',
+    category: 'Guides',
+  },
+  {
+    title: 'Open in RequestBin',
+    slug: 'open-in-requestbin',
+    description: 'Test your converted code with live HTTP endpoints using RequestBin.',
+    category: 'Integration',
+  },
+];
+
+const categories = [...new Set(docs.map(d => d.category))];
+---
+
+<Layout 
+  title="Documentation - cURL Converter"
+  description="Learn how to convert cURL commands to Python, JavaScript, Node.js and more. Complete guides and examples for developers."
+>
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Documentation</h1>
+      <p class="text-lg text-gray-600 max-w-2xl">
+        Learn how to use cURL Converter effectively. From basic conversions to advanced use cases with RequestBin integration.
+      </p>
+    </div>
+
+    <!-- Docs Grid by Category -->
+    {categories.map(category => (
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">{category}</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {docs
+            .filter(doc => doc.category === category)
+            .map(doc => (
+              <a 
+                href={`/docs/${doc.slug}/`}
+                class="group block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-lg transition-all"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-2 transition-colors">
+                  {doc.title}
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  {doc.description}
+                </p>
+                <div class="mt-4 inline-flex items-center text-sm font-medium text-blue-600 group-hover:gap-2 transition-all">
+                  Read more
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- CTA -->
+    <div class="mt-16 p-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg text-white text-center">
+      <h2 class="text-2xl font-bold mb-4">Ready to convert your cURL commands?</h2>
+      <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+        Start converting cURL to production-ready code in 14+ programming languages. Fast, secure, and completely free.
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="/" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+          Try Converter Now
+        </a>
+        <a 
+          href="https://requestbin.net/apps/curl-converter" 
+          target="_blank"
+          rel="noopener"
+          class="px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors"
+        >
+          Open in RequestBin →
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
